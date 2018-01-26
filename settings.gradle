@@ -1,1 +1,1 @@
-include ':app', ':soraka', ':pushlibrary', ':uapplibrary'
+include ':app', ':soraka', ':pushlibrary', ':uapplibrary', ':sharelibrary'

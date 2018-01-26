@@ -1,14 +1,17 @@
 package com.ocnyang.support;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.ocnyang.pushlibrary.IPushOnReceiveListener;
 import com.ocnyang.pushlibrary.MIPushMessageReceiver;
 import com.ocnyang.pushlibrary.MIPushUser;
+import com.ocnyang.soraka.view.Html5WebViewActivity;
 import com.xiaomi.mipush.sdk.MiPushCommandMessage;
 import com.xiaomi.mipush.sdk.MiPushMessage;
 
@@ -55,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Html5WebViewActivity.class));
+            }
+        });
     }
 
     /**

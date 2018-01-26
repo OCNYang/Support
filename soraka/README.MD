@@ -119,3 +119,45 @@ mob地址：[http://www.mob.com/downloadDetail/SMS/android](http://www.mob.com/d
 
 ### 15. UAppLibrary友盟统计
 查看 upplibrary/readme.md
+
+### 16. SlidingLayout果冻弹跳布局
+SlidingLayout(extends FrameLayout) 其实就是一个自定义的布局
+
+XML样式参数：  
+background_view 背景 view  
+sliding_mode 滑动模式，both为上下可弹跳，top 为顶部弹跳，bottom 为底部弹跳，默认为 both sliding_pointer_mode 手指模式，
+one为只识别一个手指，more为支持多指滑动，默认为more top_max 当滑动模式为top时才有效，用于可滑动的最大距离，如"top_max:200dp"，默认为-1（不限制）
+
+常用API：  
+* public void setSlidingOffset(float slidingOffset)设置控件的滑动阻力，有效值为0.1F~1.0F，值越小阻力越大，默认为0.5F
+* public void setTargetView(View view)设置控件的前景View
+* public void setBackgroundView(View view) 设置控件的背景View
+* public void setSlidingListener(SlidingListener slidingListener) 给控件设置监听，可以监听滑动情况
+* public void setSlidingMode(int mode) 设置滑动模式
+* public void setSlidingDistance(int max) 设置最大滑动距离，仅在top模式下有效
+
+### 17. HTML5WebView
+封装的WebView。顶部带进度条、监听返回键、网页缓存。  
+
+### 18.BaseRecyclerViewAdapterHelper
+提供 Kotlin 的 Demo。
+
+Add it in your root build.gradle at the end of repositories:
+
+    allprojects {
+        repositories {
+            ...
+            maven { url "https://jitpack.io" }
+        }
+    }
+
+Add the dependency
+
+    dependencies {
+            compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:VERSION_CODE'
+    }
+    
+最新版本号(2.9.34)：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper/releases](https://github.com/CymChad/BaseRecyclerViewAdapterHelper/releases)
+
+GitHub 地址：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)  
+说明地址：[https://www.jianshu.com/p/b343fcff51b0](https://www.jianshu.com/p/b343fcff51b0)  
