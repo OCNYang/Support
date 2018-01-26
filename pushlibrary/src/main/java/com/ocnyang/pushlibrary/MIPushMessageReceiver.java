@@ -63,9 +63,54 @@ public class MIPushMessageReceiver extends PushMessageReceiver {
     private String mStartTime;
     private String mEndTime;
     public static final String TAG = "COM.OCNYang";
+    public static IPushOnReceiveListener sIPushOnReceiveListener;
+
+    public static IPushOnReceiveListener getIPushOnReceiveListener() {
+        return sIPushOnReceiveListener;
+    }
+
+    public static void setIPushOnReceiveListener(IPushOnReceiveListener IPushOnReceiveListener) {
+        sIPushOnReceiveListener = IPushOnReceiveListener;
+    }
+
+    private void actionMessageEvent(Context context, MiPushMessage message, int flag) {
+        if (sIPushOnReceiveListener == null) {
+            return;
+        }
+        switch (flag) {
+            case 1:
+                sIPushOnReceiveListener.onReceivePassThroughMessage(context, message);
+                break;
+            case 2:
+                sIPushOnReceiveListener.onNotificationMessageClicked(context, message);
+                break;
+            case 3:
+                sIPushOnReceiveListener.onNotificationMessageArrived(context, message);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void actionResultEvent(Context context, MiPushCommandMessage miPushCommandMessage, int flag) {
+        if (sIPushOnReceiveListener == null) {
+            return;
+        }
+        switch (flag) {
+            case 4:
+                sIPushOnReceiveListener.onCommandResult(context, miPushCommandMessage);
+                break;
+            case 5:
+                sIPushOnReceiveListener.onReceiveRegisterResult(context, miPushCommandMessage);
+                break;
+            default:
+                break;
+        }
+    }
 
     @Override
     public void onReceivePassThroughMessage(Context context, MiPushMessage message) {
+        actionMessageEvent(context, message, 1);
         Log.v(TAG,
                 "onReceivePassThroughMessage is called. " + message.toString());
         String log = context.getString(R.string.recv_passthrough_message, message.getContent());
@@ -78,11 +123,12 @@ public class MIPushMessageReceiver extends PushMessageReceiver {
 
         Message msg = Message.obtain();
         msg.obj = log;
-        Log.e("message",log);
+        Log.e("message", log);
     }
 
     @Override
     public void onNotificationMessageClicked(Context context, MiPushMessage message) {
+        actionMessageEvent(context, message, 2);
         Log.v(TAG,
                 "onNotificationMessageClicked is called. " + message.toString());
         String log = context.getString(R.string.click_notification_message, message.getContent());
@@ -97,11 +143,12 @@ public class MIPushMessageReceiver extends PushMessageReceiver {
         if (message.isNotified()) {
             msg.obj = log;
         }
-        Log.e("message",log);
+        Log.e("message", log);
     }
 
     @Override
     public void onNotificationMessageArrived(Context context, MiPushMessage message) {
+        actionMessageEvent(context, message, 3);
         Log.v(TAG,
                 "onNotificationMessageArrived is called. " + message.toString());
         String log = context.getString(R.string.arrive_notification_message, message.getContent());
@@ -114,11 +161,12 @@ public class MIPushMessageReceiver extends PushMessageReceiver {
 
         Message msg = Message.obtain();
         msg.obj = log;
-        Log.e("message",log);
+        Log.e("message", log);
     }
 
     @Override
     public void onCommandResult(Context context, MiPushCommandMessage message) {
+        actionResultEvent(context, message, 4);
         Log.v(TAG,
                 "onCommandResult is called. " + message.toString());
         String command = message.getCommand();
@@ -189,11 +237,12 @@ public class MIPushMessageReceiver extends PushMessageReceiver {
 
         Message msg = Message.obtain();
         msg.obj = log;
-        Log.e("message",log);
+        Log.e("message", log);
     }
 
     @Override
     public void onReceiveRegisterResult(Context context, MiPushCommandMessage message) {
+        actionResultEvent(context, message, 5);
         Log.v(TAG,
                 "onReceiveRegisterResult is called. " + message.toString());
         String command = message.getCommand();
@@ -213,7 +262,7 @@ public class MIPushMessageReceiver extends PushMessageReceiver {
 
         Message msg = Message.obtain();
         msg.obj = log;
-        Log.e("message",log);
+        Log.e("message", log);
     }
 
     @SuppressLint("SimpleDateFormat")
