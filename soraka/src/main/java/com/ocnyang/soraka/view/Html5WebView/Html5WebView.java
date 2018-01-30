@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.webkit.GeolocationPermissions;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -20,7 +19,7 @@ import com.ocnyang.soraka.R;
 public class Html5WebView extends WebView {
 
     private ProgressBar mProgressBar;
-//    boolean isNotTop = true;
+    //    boolean isNotTop = true;
     private Context mContext;
     private WebsiteChangeListener mWebsiteChangeListener;
 
@@ -71,8 +70,7 @@ public class Html5WebView extends WebView {
         saveData(mWebSettings);
         newWin(mWebSettings);
         setWebChromeClient(webChromeClient);
-        setWebViewClient(webViewClient);//原来的设置。
-//        setWebViewClient(new NoAdWebViewClient(mContext));//去除广告，可是不起作用
+        setWebViewClient(webViewClient);
     }
 
     /**
@@ -111,8 +109,7 @@ public class Html5WebView extends WebView {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
-            Log.d("Url:", url);
-            if (mWebsiteChangeListener!=null) {
+            if (mWebsiteChangeListener != null) {
                 mWebsiteChangeListener.onUrlChange(url);
             }
             return true;
@@ -178,19 +175,20 @@ public class Html5WebView extends WebView {
         @Override
         public void onReceivedTitle(WebView view, String title) {
             super.onReceivedTitle(view, title);
-            if (mWebsiteChangeListener!=null) {
+            if (mWebsiteChangeListener != null) {
                 mWebsiteChangeListener.onWebsiteChange(title);
             }
         }
     };
 
-    public interface WebsiteChangeListener{
+    public interface WebsiteChangeListener {
         void onWebsiteChange(String title);
+
         void onUrlChange(String url);
 //        void onWebsiteChangeBackTop();
     }
 
-    public void setWebsiteChangeListener(WebsiteChangeListener websiteChangeListener){
+    public void setWebsiteChangeListener(WebsiteChangeListener websiteChangeListener) {
         this.mWebsiteChangeListener = websiteChangeListener;
 
     }
