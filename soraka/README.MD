@@ -50,10 +50,10 @@ init:
 
 GitHub 地址：[https://github.com/orhanobut/logger](https://github.com/orhanobut/logger)  
 
-### 9. leakcannary
+### 9. leakcannary(主项目引入)
 
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 
 使用方式：在主项目的 `BaseApplication` 中初始化：  
 
