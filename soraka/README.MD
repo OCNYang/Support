@@ -190,4 +190,12 @@ GitHub 地址：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper](https
 
 使用：在主项目的BaseApp或MainActivity中注册这个广播；  
 
+    NetworkConnectChangedReceiver mNetworkChangeReceiver;
+    mNetworkChangeReceiver = new NetworkConnectChangedReceiver();
+    IntentFilter filter = new IntentFilter();
+    filter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
+    filter.addAction("android.net.wifi.WIFI_STATE_CHANGED");
+    filter.addAction("android.net.wifi.STATE_CHANGE");
+    registerReceiver(mNetworkChangeListener,filter);
+
 （可选）如果想更改网络变化的处理逻辑，请重写相对应的回调方法。
