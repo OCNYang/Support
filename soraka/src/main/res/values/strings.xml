@@ -3,4 +3,5 @@
     <!--SlidingLayout background-->
     <string name="sldinglayout_bg_power_info">author site: www.ocnyang.com</string>
     <string name="sldinglayout_bg_developer_info">©2014 - 2018  Developed by OCN.Yang</string>
+    <string name="network_connect_no_use">当前没有网络连接,请检查你的网络设置</string>
 </resources>

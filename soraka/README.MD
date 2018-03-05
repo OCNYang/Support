@@ -161,3 +161,33 @@ Add the dependency
 
 GitHub 地址：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)  
 说明地址：[https://www.jianshu.com/p/b343fcff51b0](https://www.jianshu.com/p/b343fcff51b0)  
+
+## 19.线程池(两个常用的)
+
+1. CachedTreadPool 可缓存线程池,可灵活回收空闲线程。使用:  
+
+        CachedThreadPool.THREAD.start(runnable);
+
+2. ScheduledThreadPool 延迟执行、延迟循环执行，比Timer更安全，功能更强大。使用：
+
+        ScheduledThreadPool.THREAD.start(runnable,delay);
+        //或
+        ScheduledThreadPool.THREAD.start(runnable,delay,period);
+        
+## 20. EventSmartMan
+
+防止同一按钮在短时间内被多次点击,使用：
+
+    EventSmartMan.CLICK.start(viewID, safeTime_seconds);
+
+## 21. NetworkConnectChangedReceiver
+
+网络改变监听广播：  
+* 监听手机WIF连接或断开状态的监听；  
+* 监听手机WIFI连接是否有效的监听；  
+* 监听手机数据连接是否有效的监听；  
+* 监听手机是否有网络连接；  
+
+使用：在主项目的BaseApp或MainActivity中注册这个广播；  
+
+（可选）如果想更改网络变化的处理逻辑，请重写相对应的回调方法。
