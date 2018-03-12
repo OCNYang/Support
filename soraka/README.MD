@@ -196,6 +196,17 @@ GitHub 地址：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper](https
     filter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
     filter.addAction("android.net.wifi.WIFI_STATE_CHANGED");
     filter.addAction("android.net.wifi.STATE_CHANGE");
-    registerReceiver(mNetworkChangeListener,filter);
+    registerReceiver(mNetworkChangeReceiver,filter);
 
 （可选）如果想更改网络变化的处理逻辑，请重写相对应的回调方法。
+
+## 22. CrashHandler  
+
+捕获全局异常:  
+在代码中已经catch 的异常不会再捕捉到；  
+友盟统计中，默认会将为捕获的异常统计下来，这里无需再向友盟平台提交；  
+
+使用方式(在BaseApplication中)：  
+
+    CrashHandler crashHandler = CrashHandler.getInstance();
+    crashHandler.init(this);

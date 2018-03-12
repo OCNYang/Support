@@ -5,23 +5,21 @@
     <item android:id="@android:id/background">
         <shape>
             <!--<corners android:radius="2dp" />-->
-
             <gradient
                 android:angle="270"
-                android:centerColor="#E3E3E3"
-                android:endColor="#E6E6E6"
-                android:startColor="#C8C8C8" />
+                android:centerColor="@color/h5webview_progress_bar_centercolor"
+                android:endColor="@color/h5webview_progress_bar_endcolor"
+                android:startColor="@color/h5webview_progress_bar_startcolor" />
         </shape>
     </item>
     <item android:id="@android:id/progress">
         <clip>
             <shape>
                 <!--<corners android:radius="2dp" />-->
-
                 <gradient
-                    android:centerColor="#4AEA2F"
-                    android:endColor="#31CE15"
-                    android:startColor="#5FEC46" />
+                    android:centerColor="@color/h5webview_progress_bar_cover_centercolor"
+                    android:endColor="@color/h5webview_progress_bar_cover_endcolor"
+                    android:startColor="@color/h5webview_progress_bar_cover_startcolor" />
             </shape>
         </clip>
     </item>

@@ -26,7 +26,7 @@ import com.ocnyang.soraka.R;
  * 然后对相应的界面进行相应的操作，并将 状态 保存在我们的APP里面
  */
 
-public abstract class NetworkConnectChangedReceiver extends BroadcastReceiver implements
+public class NetworkConnectChangedReceiver extends BroadcastReceiver implements
         NetworkConnectChangeListener,
         MobileNetworkConnectChangeListener,
         WifiStateChangeListener,

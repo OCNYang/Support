@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="h5webview_progress_bar_centercolor">#E3E3E3</color>
+    <color name="h5webview_progress_bar_endcolor">#E6E6E6</color>
+    <color name="h5webview_progress_bar_startcolor">#C8C8C8</color>
+
+    <color name="h5webview_progress_bar_cover_startcolor">#5FEC46</color>
+    <color name="h5webview_progress_bar_cover_endcolor">#31CE15</color>
+    <color name="h5webview_progress_bar_cover_centercolor">#4AEA2F</color>
+</resources>
