@@ -210,3 +210,10 @@ GitHub 地址：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper](https
 
     CrashHandler crashHandler = CrashHandler.getInstance();
     crashHandler.init(this);
+    
+## 23. Bugly & Tinker
+
+目前 Bugly 有应用统计、Bug 搜集上传、应用升级、Tinker 热更新的功能。  
+可以考虑将其代替 UMeng 统计。  
+
+具体使用方式请看官方文档。直接在主项目中引入，不要在依赖库中使用。
