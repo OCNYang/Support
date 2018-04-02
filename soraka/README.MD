@@ -4,25 +4,28 @@
 
 ### 2. Retrofit
 
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
 
 API 地址：[http://square.github.io/retrofit/](http://square.github.io/retrofit/)  
 GitHub 地址：[https://github.com/square/retrofit](https://github.com/square/retrofit)  
 
 ### 3. OkHttp
 
-    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'com.squareup.okhttp3:okhttp:3.10.0'
 
 API 地址：[http://square.github.io/okhttp/](http://square.github.io/okhttp/)  
 GitHub 地址：[https://github.com/square/okhttp](https://github.com/square/okhttp)  
 
-### 4. RxJava(未引入)
+### 4. RxJava(引入)
 
+    compile 'io.reactivex.rxjava2:rxjava:2.1.12'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    
 GitHub 地址：[https://github.com/ReactiveX/RxJava](https://github.com/ReactiveX/RxJava)  
 
 ### 5. fresco
 
-    implementation 'com.facebook.fresco:fresco:1.8.0'
+    implementation 'com.facebook.fresco:fresco:1.8.1'
 
 使用说明地址：[https://www.fresco-cn.org/docs/index.html](https://www.fresco-cn.org/docs/index.html)  
 GitHub 地址：[https://github.com/facebook/fresco](https://github.com/facebook/fresco)  
