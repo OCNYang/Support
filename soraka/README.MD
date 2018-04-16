@@ -177,11 +177,19 @@ GitHub 地址：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper](https
         //或
         ScheduledThreadPool.THREAD.start(runnable,delay,period);
         
-## 20. EventSmartMan
+## 20. 防止过快点击造成多次事件执行
 
-防止同一按钮在短时间内被多次点击,使用：
+**EventSmartMan**
+防止同一按钮在短时间内被多次点击（是否合理值得商榷，能够正常使用，可能会有 bug）,使用：
 
     EventSmartMan.CLICK.start(viewID, safeTime_seconds);
+
+**EventSmart**
+
+    EventSmart.click();
+
+**com.ocnyang.soraka.asset.OnClickListener**
+原理同 EventSmart。直接在设置点击事件时使用。
 
 ## 21. NetworkConnectChangedReceiver
 
