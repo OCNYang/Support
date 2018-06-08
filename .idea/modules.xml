@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Support.iml" filepath="$PROJECT_DIR$/.idea/Support.iml" />
       <module fileurl="file://$PROJECT_DIR$/Support.iml" filepath="$PROJECT_DIR$/Support.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pushlibrary/pushlibrary.iml" filepath="$PROJECT_DIR$/pushlibrary/pushlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/pushlibrary/pushlibrary.iml" filepath="$PROJECT_DIR$/pushlibrary/pushlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/sharelibrary/sharelibrary.iml" filepath="$PROJECT_DIR$/sharelibrary/sharelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharelibrary/sharelibrary.iml" filepath="$PROJECT_DIR$/sharelibrary/sharelibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/soraka/soraka.iml" filepath="$PROJECT_DIR$/soraka/soraka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/soraka/soraka.iml" filepath="$PROJECT_DIR$/soraka/soraka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uapplibrary/uapplibrary.iml" filepath="$PROJECT_DIR$/uapplibrary/uapplibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/uapplibrary/uapplibrary.iml" filepath="$PROJECT_DIR$/uapplibrary/uapplibrary.iml" />
     </modules>
   </component>

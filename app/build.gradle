@@ -6,8 +6,8 @@ android {
         applicationId "com.ocnyang.support"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 11
-        versionName "1.1.0"
+        versionCode 12
+        versionName "1.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
@@ -37,4 +37,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':soraka')
     implementation 'com.android.support:support-emoji:27.1.0'
+    implementation project(':uapplibrary')
+    compile project(':pushlibrary')
 }
