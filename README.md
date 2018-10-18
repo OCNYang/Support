@@ -11,7 +11,7 @@
 
 **Step 1.** Add the token to $HOME/.gradle/gradle.properties  
 
-:authToken=jp_a1f20fodr074h4tp9nksut8nk4
+<!--authToken=jp_a1f20fodr074h4tp9nksut8nk4-->
 
 **Step 2.** Then use authToken as the username in your build.gradle  
 
