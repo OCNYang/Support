@@ -228,3 +228,7 @@ GitHub 地址：[https://github.com/CymChad/BaseRecyclerViewAdapterHelper](https
 可以考虑将其代替 UMeng 统计。  
 
 具体使用方式请看官方文档。直接在主项目中引入，不要在依赖库中使用。
+
+## 24. StatusBarUtil
+
+具体使用说明查看：https://github.com/laobie/StatusBarUtil
